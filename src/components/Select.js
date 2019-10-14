@@ -2,9 +2,12 @@ import React from 'react'
 import './Select.css'
 
 const Select = props => {
+
+    let obj = {}
     
     const onChange = e => {
-        console.log(e.target.value)
+        obj.key = e.target.value
+        console.log(obj)
     }
 
     let input
