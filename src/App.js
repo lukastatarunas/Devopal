@@ -1,23 +1,23 @@
-import React, { useState } from 'react';
-import './App.css';
-import Select from './components/Select';
+import React, { useState } from 'react'
+import './App.css'
+import Select from './components/Select'
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Link
-} from "react-router-dom";
+} from "react-router-dom"
 
 const App = () => {
 
   const [multipleOptions, setMultipleOptions] = useState(false)
 
   const setOnlyOption = () => {
-    setMultipleOptions(false);
+    setMultipleOptions(false)
   }
 
   const setMultipleOption = () => {
-    setMultipleOptions(true);
+    setMultipleOptions(true)
   }
 
   return (
@@ -43,7 +43,7 @@ const App = () => {
         </Switch>
       </div>
     </Router>
-  );
+  )
 }
 
-export default App;
+export default App

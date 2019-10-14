@@ -1,5 +1,5 @@
-import React from 'react';
-import './Select.css';
+import React from 'react'
+import './Select.css'
 
 const Select = props => {
     
@@ -20,22 +20,24 @@ const Select = props => {
     return (
         <div className="App">
             {input}
-            <datalist id="languages">
-                <option value="HTML"></option>
-                <option value="CSS"></option>
-                <option value="JavaScript"></option>
-                <option value="Java"></option>
-                <option value="Ruby"></option>
-                <option value="PHP"></option>
-                <option value="Go"></option>
-                <option value="Erlang"></option>
-                <option value="Python"></option>
-                <option value="C"></option>
-                <option value="C#"></option>
-                <option value="C++"></option>
+            <datalist className="datalist" id="languages">
+                <div className="datalist__items">
+                    <option className="datalist__items-item" value="HTML"></option>
+                    <option className="datalist__items-item" value="CSS"></option>
+                    <option className="datalist__items-item" value="JavaScript"></option>
+                    <option className="datalist__items-item" value="Java"></option>
+                    <option className="datalist__items-item" value="Ruby"></option>
+                    <option className="datalist__items-item" value="PHP"></option>
+                    <option className="datalist__items-item" value="Go"></option>
+                    <option className="datalist__items-item" value="Erlang"></option>
+                    <option className="datalist__items-item" value="Python"></option>
+                    <option className="datalist__items-item" value="C"></option>
+                    <option className="datalist__items-item" value="C#"></option>
+                    <option className="datalist__items-item" value="C++"></option>
+                </div>
             </datalist>
         </div>
-    );
+    )
 }
 
-export default Select;
+export default Select
