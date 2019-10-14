@@ -3,6 +3,7 @@ import './Select.css'
 
 const Select = props => {
   
+  const [value, setValue] = useState(``)
   const [tags, setTags] = useState([])
 
   const removeTag = i => {
@@ -10,6 +11,12 @@ const Select = props => {
     newTags.splice(i, 1)
     setTags(newTags)
   }
+
+  const handleChange = e => {
+    setValue(e.target.value)
+  }
+
+  console.log(`value:`, value)
 
   const inputKeyDown = e => {
     const val = e.target.value
@@ -24,7 +31,9 @@ const Select = props => {
     }
   }
 
-  let input = props.multipleOptions ? <input type="email" list="languages" onKeyDown={inputKeyDown} /> : <input type="email" list="languages" />
+  console.log(`tags:`, tags)
+
+  let input = props.multipleOptions ? <input type="email" list="languages" onKeyDown={inputKeyDown} /> : <input type="email" list="languages" onChange={handleChange} />
 
   return (
     <div className="App">
