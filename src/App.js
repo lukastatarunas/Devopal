@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import './App.css'
-import Select from './components/Select'
+// import Select from './components/Select'
+import InputTag from './components/InputTag'
 import {
   BrowserRouter as Router,
   Switch,
@@ -19,7 +20,7 @@ const App = () => {
   const setMultipleOption = () => {
     setMultipleOptions(true)
   }
-
+  const selectedTags = tags => console.log(tags)
   return (
     <Router>
       <div>
@@ -35,10 +36,12 @@ const App = () => {
         </nav>
         <Switch>
           <Route path="/one">
-            <Select multipleOptions={multipleOptions} />
+            {/* <Select multipleOptions={multipleOptions} /> */}
+            <InputTag />
           </Route>
           <Route path="/multiple">
-            <Select multipleOptions={multipleOptions} />
+            {/* <Select multipleOptions={multipleOptions} /> */}
+            <InputTag />
           </Route>
         </Switch>
       </div>

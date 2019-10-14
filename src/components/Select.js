@@ -1,13 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Select.css'
 
 const Select = props => {
 
-    let obj = {}
-    
+    const [values, setValues] = useState([])
+
+    let arr = []
+
     const onChange = e => {
-        obj.key = e.target.value
-        console.log(obj)
+        arr.push(e.target.value)
+        setValues(arr)
+        console.log(arr)
     }
 
     let input
