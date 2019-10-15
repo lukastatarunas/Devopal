@@ -20,20 +20,22 @@ const Select = props => {
 
   const inputKeyDown = e => {
     const val = e.target.value
-    if (e.key === 'Enter' && val) {
+    if (val) {
       if (tags.find(tag => tag.toLowerCase() === val.toLowerCase())) {
         return
       }
       setTags([...tags, val])
-      e.target.value = null
-    } else if (e.key === 'Backspace' && !val) {
+      e.target.value = ""
+    }
+    
+    else if (!val) {
       removeTag(tags.length - 1)
     }
   }
 
   console.log(`tags:`, tags)
 
-  let input = props.multipleOptions ? <input type="email" list="languages" onKeyDown={inputKeyDown} /> : <input type="email" list="languages" onChange={handleChange} />
+  let input = props.multipleOptions ? <input id="test" type="email" list="languages" onChange={inputKeyDown} /> : <input id="test" type="email" list="languages" onChange={handleChange} />
 
   return (
     <div className="App">
