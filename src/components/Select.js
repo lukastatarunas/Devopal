@@ -20,7 +20,7 @@ const Select = props => {
 
   const inputKeyDown = e => {
     const val = e.target.value
-    if (val) {
+    if (val === "HTML" || val === "CSS" || val === "JavaScript" || val === "Java" || val === "Ruby" || val === "PHP" || val === "Go" || val === "Erlang" || val === "Python" || val === "C" || val === "C#" || val === "C++") {
       if (tags.find(tag => tag.toLowerCase() === val.toLowerCase())) {
         return
       }
